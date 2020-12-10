@@ -1,5 +1,4 @@
 'use strict';
-// added
 const bcrypt = require('bcrypt')
 
 const {
@@ -14,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.user.belongsToMany(models.workout, {
+        through: "user_workout"
+      });
     }
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
@@ -36,7 +38,16 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    name: {
+    firstName: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [1, 99],
+          msg: 'Name must be between 1 and 99 characters'
+        }
+      }
+    },
+    lastName: {
       type: DataTypes.STRING,
       validate: {
         len: {
@@ -53,6 +64,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Password must be between 8 and 99 characters'
         }
       }
+    },
+    isInstructor: {
+      type: DataTypes.BOOLEAN,
     }
   }, {
     sequelize,
