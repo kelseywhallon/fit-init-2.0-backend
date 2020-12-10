@@ -5,10 +5,10 @@ const login = (req, res) => {
 }
 
 const register = (req, res) => {
-  const { name, email, password } = req.body
+  const { firstName, lastName, email, password, isInstructor } = req.body
   
   // validate the POSTed data - making sure we have a name, an email, a pw
-  if (!name || !email || !password) {
+  if (!firstName || !lastName || !email || !password) {
     return res.json({ message: 'Please enter a name, an email, and a password' })
   }
 
@@ -21,9 +21,11 @@ const register = (req, res) => {
 
       // if the user doesnt exist, create and save a user to the DB
       db.user.create({
-        name,
+        firstName,
+        lastName,
         email,
-        password
+        password,
+        isInstructor
       }).then(newUser => {
         console.log('New user created!')
         res.json(newUser)

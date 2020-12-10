@@ -21,6 +21,7 @@ module.exports = {
         lastName: 'Whallon',
         email: 'kwhallon@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: true,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -29,6 +30,7 @@ module.exports = {
         lastName: 'Whallon',
         email: 'swhallon@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: true,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -37,6 +39,7 @@ module.exports = {
         lastName: 'Whallon',
         email: 'rwhallon@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -45,6 +48,7 @@ module.exports = {
         lastName: 'Lynn',
         email: 'vlynn@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -53,6 +57,7 @@ module.exports = {
         lastName: 'Curtis',
         email: 'mcurtis@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -61,6 +66,7 @@ module.exports = {
         lastName: 'Brewer',
         email: 'jbrew@gmail.com',
         password: bcrypt.hashSync('password', 12),
+        isInstructor: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
