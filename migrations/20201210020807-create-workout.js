@@ -11,7 +11,10 @@ module.exports = {
       exerciseCategory: {
         type: Sequelize.STRING
       },
-      exerciseId: {
+      exerciseName: {
+        type: Sequelize.STRING
+      },
+      exerciseReps: {
         type: Sequelize.INTEGER
       },
       createdAt: {
