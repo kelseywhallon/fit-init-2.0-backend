@@ -1,11 +1,11 @@
 const db = require('../models')
 
 const newWorkout = (req, res) => {
-    const { exerciseCategory, exerciseName, exerciseReps } = req.body
+    const { exerciseName, exerciseCategory, exerciseReps } = req.body
     
     db.workout.create({
-        exerciseCategory,
         exerciseName,
+        exerciseCategory,
         exerciseReps
     }).then(newWorkout => {
         console.log('New workout added!')
@@ -13,4 +13,31 @@ const newWorkout = (req, res) => {
     })
 }
 
-module.exports = { newWorkout }
+const findWorkout = (req, res) => {
+    db.workout
+        .findByPk(req.params.id)
+        .then(foundWorkout => {
+            if (!foundWorkout)
+                return res.json({
+                    message: "Workout with provided ID not found."
+                });
+            res.json({ workout: foundWorkout });
+        })
+        .catch(err => console.log("Error at user#index", err));
+}
+
+const findAllWorkouts = (req, res) => {
+    db.workout.findAll()
+        .then(foundAllWorkouts => {
+            if(!foundAllWorkouts)
+                return res.json({
+                    message: "No workouts found"
+                });
+            res.json({ AllWorkouts: foundAllWorkouts });
+        })
+        .catch(err => console.log("Error at user#index", err));
+}
+
+
+
+module.exports = { newWorkout, findAllWorkouts, findWorkout }

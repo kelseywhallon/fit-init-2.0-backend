@@ -72,6 +72,37 @@ module.exports = {
       },
 
     ], { returning: true })
+
+
+    await queryInterface.bulkDelete('workouts', null, { truncate: true, cascade: true, restartIdentity: true });
+
+    const bulkWorkouts = await queryInterface.bulkInsert('workouts', [
+      {
+        exerciseName: ['Sqauts', 'Dead lifts', 'plank hold'],
+        exerciseReps: 12,
+        exerciseCategory: 'Abs',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        exerciseName: ['Narrow V', 'Glute Bridge', 'Box Lunge'],
+        exerciseReps: 12,
+        exerciseCategory: 'Legs',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        exerciseName: ['Biceps', 'Triceps', 'Lats'],
+        exerciseReps: 12,
+        exerciseCategory: 'Arms',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+    
+
+    ], { returning: true })
+
+
   },
 
   down: async (queryInterface, Sequelize) => {

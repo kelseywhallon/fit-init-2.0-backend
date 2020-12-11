@@ -49,6 +49,7 @@ const version = "/api/v1";
 app.use(version + "/auth", routes.auth);
 app.use(version + "/users", routes.users);
 app.use(version + "/exercises", routes.exercises);
+app.use(version + "/workouts", routes.workouts);
 
 // connection
 app.listen(port, () => console.log(`Server is running on port ${port}`));
