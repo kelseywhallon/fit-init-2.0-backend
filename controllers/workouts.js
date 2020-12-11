@@ -1,6 +1,8 @@
 const db = require('../models')
 
 const newWorkout = (req, res) => {
+    const { exerciseCategory, exerciseName, exerciseReps } = req.body
+    
     db.workout.create({
         exerciseCategory,
         exerciseName,
