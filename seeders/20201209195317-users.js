@@ -78,30 +78,47 @@ module.exports = {
 
     const bulkWorkouts = await queryInterface.bulkInsert('workouts', [
       {
-        exerciseName: ['Sqauts', 'Dead lifts', 'plank hold'],
-        exerciseReps: 12,
-        exerciseCategory: 'Abs',
+        workoutType: 'Abs',
+        workoutName: 'Full Body Ab Day',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        exerciseName: ['Narrow V', 'Glute Bridge', 'Box Lunge'],
-        exerciseReps: 12,
-        exerciseCategory: 'Legs',
+        workoutType: 'Arms',
+        workoutName: 'Biceps Biceps Biceps',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        exerciseName: ['Biceps', 'Triceps', 'Lats'],
-        exerciseReps: 12,
-        exerciseCategory: 'Arms',
+        workoutType: 'Glutes',
+        workoutName: 'Glutes on Glutes',
         createdAt: new Date(),
         updatedAt: new Date()
       },
-    
-
     ], { returning: true })
 
+    await queryInterface.bulkDelete('exercises', null, { truncate: true, cascade: true, restartIdentity: true });
+
+    const bulkExercises = await queryInterface.bulkInsert('exercises', [
+      {
+        exerciseId: 345,
+        exerciseName: '2 Handed Kettlebell Swing',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        exerciseId: 110,
+        exerciseName: 'Bent Over Rowing Reverse',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        exerciseId: 93,
+        exerciseName: 'Negative Crunches',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+    ], { returning: true })
 
   },
 
