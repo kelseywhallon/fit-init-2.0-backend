@@ -23,7 +23,7 @@ const findWorkout = (req, res) => {
                 });
             res.json({ workout: foundWorkout });
         })
-        .catch(err => console.log("Error at user#index", err));
+        .catch(err => console.log("Error at workout#index", err));
 }
 
 const findAllWorkouts = (req, res) => {
@@ -35,9 +35,13 @@ const findAllWorkouts = (req, res) => {
                 });
             res.json({ AllWorkouts: foundAllWorkouts });
         })
-        .catch(err => console.log("Error at user#index", err));
+        .catch(err => console.log(" error at findAllWorkouts", err));
 }
 
 
 
-module.exports = { newWorkout, findAllWorkouts, findWorkout }
+module.exports = { 
+    newWorkout, 
+    findAllWorkouts, 
+    findWorkout 
+}
