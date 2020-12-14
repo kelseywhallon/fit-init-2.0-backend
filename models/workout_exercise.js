@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   workout_exercise.init({
     workoutId: DataTypes.INTEGER,
     exerciseId: DataTypes.INTEGER,
-    exerciseReps: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'workout_exercise',

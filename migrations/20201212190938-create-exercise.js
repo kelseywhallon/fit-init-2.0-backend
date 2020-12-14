@@ -8,11 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      exerciseId: {
-        type: Sequelize.INTEGER
-      },
       exerciseName: {
         type: Sequelize.STRING
+      },
+      exerciseReps: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

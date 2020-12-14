@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       models.workout.belongsToMany(models.user, {
         through: "user_workout"
       });
+      models.workout.belongsToMany(models.exercise, {
+        through: "workout_exercise"
+      });
     }
   };
   workout.init({
