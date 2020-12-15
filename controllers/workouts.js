@@ -29,7 +29,7 @@ const newWorkout = (req, res) => {
                 console.log("hellooooo")
                 console.log(data)
                 foundWorkout.addExercise(data).then(relationInfo => {
-                    console.log(`${data.exerciseName} was added to the workout: ${foundWorkout.name}`);
+                    console.log(`${data.exerciseName} was added to the workout: ${foundWorkout.workoutName}`);
                 });
             });
         }
