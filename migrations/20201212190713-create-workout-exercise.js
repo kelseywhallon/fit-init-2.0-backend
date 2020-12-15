@@ -14,9 +14,6 @@ module.exports = {
       exerciseId: {
         type: Sequelize.INTEGER
       },
-      exerciseReps: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

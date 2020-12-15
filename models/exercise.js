@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   exercise.init({
-    exerciseId: DataTypes.INTEGER,
     exerciseName: DataTypes.STRING,
     exerciseReps: DataTypes.INTEGER
   }, {

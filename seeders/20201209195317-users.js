@@ -101,19 +101,16 @@ module.exports = {
 
     const bulkExercises = await queryInterface.bulkInsert('exercises', [
       {
-        exerciseId: 345,
         exerciseName: '2 Handed Kettlebell Swing',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        exerciseId: 110,
         exerciseName: 'Bent Over Rowing Reverse',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        exerciseId: 93,
         exerciseName: 'Negative Crunches',
         createdAt: new Date(),
         updatedAt: new Date()
