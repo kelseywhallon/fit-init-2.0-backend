@@ -1,11 +1,11 @@
 const db = require('../models')
 
 const createExercise = (req, res) => {
-    const { exerciseId, exerciseName } = req.body
+    const { exerciseName, exerciseReps } = req.body
     
     db.exercise.create({
-        exerciseId,
-        exerciseName
+        exerciseName,
+        exerciseReps
     }).then(newExercise => {
         console.log("New exercise was added!")
         res.json(newExercise)

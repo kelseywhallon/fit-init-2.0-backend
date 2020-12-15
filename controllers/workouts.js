@@ -8,12 +8,12 @@ const newWorkout = (req, res) => {
         workoutType, 
         workoutName
     }).then(foundWorkout => {
-        // foundWorkout.addExercise(req.body.exercises[0]).then(data => { console.log(data); })
-        console.log(req.body.exercises[0].exerciseName)
+        // console.log(req.body.exercises[0].exerciseName)
+        // console.log("req.body", req.body.exercises[i])
         for (let i = 0; i < req.body.exercises.length; i++) {
-            
             db.exercise.create({ 
                 exerciseName: req.body.exercises[i].exerciseName,
+                // exerciseReps: req.body.exerciseReps[i],
                 exerciseReps: req.body.exercises[i].exerciseReps
             })
             .then((data) => {
