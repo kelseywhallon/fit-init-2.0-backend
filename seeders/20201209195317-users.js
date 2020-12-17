@@ -73,50 +73,6 @@ module.exports = {
 
     ], { returning: true })
 
-
-    // await queryInterface.bulkDelete('workouts', null, { truncate: true, cascade: true, restartIdentity: true });
-
-    // const bulkWorkouts = await queryInterface.bulkInsert('workouts', [
-    //   {
-    //     workoutType: 'Abs',
-    //     workoutName: 'Full Body Ab Day',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    //   {
-    //     workoutType: 'Arms',
-    //     workoutName: 'Biceps Biceps Biceps',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    //   {
-    //     workoutType: 'Glutes',
-    //     workoutName: 'Glutes on Glutes',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    // ], { returning: true })
-
-    // await queryInterface.bulkDelete('exercises', null, { truncate: true, cascade: true, restartIdentity: true });
-
-    // const bulkExercises = await queryInterface.bulkInsert('exercises', [
-    //   {
-    //     exerciseName: '2 Handed Kettlebell Swing',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    //   {
-    //     exerciseName: 'Bent Over Rowing Reverse',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    //   {
-    //     exerciseName: 'Negative Crunches',
-    //     createdAt: new Date(),
-    //     updatedAt: new Date()
-    //   },
-    // ], { returning: true })
-
   },
 
   down: async (queryInterface, Sequelize) => {

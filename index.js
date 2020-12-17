@@ -50,7 +50,6 @@ app.use(version + "/auth", routes.auth);
 app.use(version + "/users", routes.users);
 app.use(version + "/exercises", routes.exercises);
 app.use(version + "/workouts", routes.workouts);
-// app.use(version + "/workoutexercise", routes.workoutexercise);
 
 // connection
 app.listen(port, () => console.log(`🎧 You're listening to the smooth sounds of port ${port} 🎶 🎧`));

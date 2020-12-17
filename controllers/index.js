@@ -5,5 +5,4 @@ module.exports = {
     users: require("./users"),
     exercises: require("./exercises"),
     workouts: require("./workouts"),
-    // workoutexercise: require("./workoutexercise")
 };

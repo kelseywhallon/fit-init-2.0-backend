@@ -16,14 +16,6 @@ const newWorkout = (req, res) => {
                 .then((data) => {
                     console.log("hellooooo")
                     console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
-                    console.log("hellooooo")
                     console.log(data)
                     foundWorkout.addExercise(data).then(relationInfo => {
                         console.log(`${data.exerciseName} was added to the workout: ${foundWorkout.workoutName}`);
